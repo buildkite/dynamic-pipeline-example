@@ -6,9 +6,7 @@ This repository is an example [Buildkite](https://buildkite.com/) pipeline that 
 
 ## How does it work?
 
-When a build is created it has a single job: to run `.buildkite/pipeline.sh`. This generates a the build pipeline depending on the environment.
-
-The dynamic pipeline:
+When a build is created it runs a single job that executes [.buildkite/pipeline.sh](.buildkite/pipeline.sh) and pipes the output to `buildkite-agent pipeline upload`. This example pipeline generation script:
 
 * Creates a separate test step for each directory in [steps](steps/)
 * Adds a deploy step at the end only if the build is on the master branch
