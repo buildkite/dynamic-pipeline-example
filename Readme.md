@@ -6,12 +6,41 @@ This repository is an example [Buildkite](https://buildkite.com/) pipeline that 
 
 ## How does it work?
 
-When a build is created it runs a single job that executes [.buildkite/pipeline.sh](.buildkite/pipeline.sh) and pipes the output to `buildkite-agent pipeline upload`. This example pipeline generation script:
+When a build is start it runs a single job first. This job executes `.buildkite/pipeline.sh | buildkite-agent pipeline upload`.
+
+This [.buildkite/pipeline.sh](.buildkite/pipeline.sh) script does the following:
 
 * Creates a separate test step for each directory in [steps](steps/)
 * Adds a deploy step at the end only if the build is on the master branch
 
-What else could you do? The possibilities are endless.
+For a non-master branch build it generates:
+
+```yml
+steps:
+  - command: "specs/controllers/test.sh"
+    label: "controllers"
+  - command: "specs/features/test.sh"
+    label: "features"
+  - command: "specs/models/test.sh"
+    label: "models"
+```
+
+For a master branch build it generates:
+
+```yml
+steps:
+  - command: "specs/controllers/test.sh"
+    label: "controllers"
+  - command: "specs/features/test.sh"
+    label: "features"
+  - command: "specs/models/test.sh"
+    label: "models"
+  - wait
+  - command: "echo Deploy!"
+    label: ":rocket:"
+```
+
+What else could you do? The possibilities are endless. For example [Jobsworth](https://github.com/saymedia/jobsworth) is a high-level tool that uses this to create deployments, rollbacks, QA steps, etc.
 
 ## License
 
