@@ -1,6 +1,5 @@
 # Buildkite Dynamic Pipeline Steps Example
 
-## some change 2
 
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
