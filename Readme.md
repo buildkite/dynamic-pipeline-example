@@ -1,8 +1,12 @@
 # Buildkite Dynamic Pipeline Steps Example
 
+[![Build status](https://badge.buildkite.com/c2e1cdc85d67dec83d2031e511bc208e911d178e54b59fec8b.svg)](https://buildkite.com/buildkite/dynamic-pipeline-example)
+
+This repository is an example [Buildkite](https://buildkite.com/) pipeline configuration that shows how to [programmatically generate a build pipeline](https://buildkite.com/buildkite/dynamic-pipeline-example), allowing you to customize and distribute your build jobs however you wish.
+
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
-This repository is an example [Buildkite](https://buildkite.com/) pipeline that shows how to [programmatically generate a build pipeline](https://buildkite.com/docs/guides/uploading-pipelines), allowing you to customize and distribute your build jobs however you wish.
+<img src=".buildkite/screenshot.png" alt="Screenshot of Buildkite dynamic pipeline example" />
 
 ## How does it work?
 
@@ -11,9 +15,9 @@ When a build is start it runs a single job first. This job executes `.buildkite/
 This [.buildkite/pipeline.sh](.buildkite/pipeline.sh) script does the following:
 
 * Creates a separate test step for each directory in [specs](specs/)
-* Adds a deploy step at the end only if the build is on the master branch
+* Adds a deploy step at the end only if the build is on the main branch
 
-For a non-master branch build it generates:
+For a non-main branch build it generates:
 
 ```yml
 steps:
@@ -25,7 +29,7 @@ steps:
     label: "models"
 ```
 
-For a master branch build it generates:
+For a main branch build it generates:
 
 ```yml
 steps:
