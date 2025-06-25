@@ -1,8 +1,12 @@
 # Buildkite Dynamic Pipeline Steps Example
 
+[![Build status](https://badge.buildkite.com/c2e1cdc85d67dec83d2031e511bc208e911d178e54b59fec8b.svg)](https://buildkite.com/buildkite/dynamic-pipeline-example)
+
+This repository is an example [Buildkite](https://buildkite.com/) pipeline configuration that shows how to [programmatically generate a build pipeline](https://buildkite.com/buildkite/dynamic-pipeline-example), allowing you to customize and distribute your build jobs however you wish.
+
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
-This repository is an example [Buildkite](https://buildkite.com/) pipeline that shows how to [programmatically generate a build pipeline](https://buildkite.com/docs/guides/uploading-pipelines), allowing you to customize and distribute your build jobs however you wish.
+<img src=".buildkite/screenshot.png" alt="Screenshot of Buildkite dynamic pipeline example" />
 
 ## How does it work?
 
