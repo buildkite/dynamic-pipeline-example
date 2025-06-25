@@ -11,9 +11,9 @@ When a build is start it runs a single job first. This job executes `.buildkite/
 This [.buildkite/pipeline.sh](.buildkite/pipeline.sh) script does the following:
 
 * Creates a separate test step for each directory in [specs](specs/)
-* Adds a deploy step at the end only if the build is on the master branch
+* Adds a deploy step at the end only if the build is on the main branch
 
-For a non-master branch build it generates:
+For a non-main branch build it generates:
 
 ```yml
 steps:
@@ -25,7 +25,7 @@ steps:
     label: "models"
 ```
 
-For a master branch build it generates:
+For a main branch build it generates:
 
 ```yml
 steps:
