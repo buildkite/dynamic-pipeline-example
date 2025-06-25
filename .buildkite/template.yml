@@ -1,0 +1,5 @@
+name: "Dynamic pipeline Example"
+description: "An example repository you can use as a test project with Buildkite"
+steps:
+  - command: ".buildkite/pipeline.sh | buildkite-agent pipeline upload"
+    label: ":pipeline:"
