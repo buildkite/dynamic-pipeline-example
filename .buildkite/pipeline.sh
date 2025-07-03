@@ -2,6 +2,7 @@
 
 set -eu
 
+echo "dag: true"
 echo "steps:"
 
 # A step for each dir in specs/
