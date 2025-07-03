@@ -4,6 +4,10 @@ set -eu
 
 echo "steps:"
 
+# Wait for the pipeline to be full generated before running subsequent steps
+# Can be omitted to run as uploaded!
+echo "  - wait"
+
 # A step for each dir in specs/
 
 find specs/* -type d | while read -r D; do
