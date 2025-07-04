@@ -1,5 +1,9 @@
-name: "Dynamic pipeline Example"
-description: "An example repository you can use as a test project with Buildkite"
+name: "Dynamic Pipeline Example"
+description: "An example pipeline that dynamically generates steps using a shell script."
+emoji: ":twisted_rightwards_arrows:"
+languages:
+  - "Shell"
+  - "YAML"
 steps:
-  - command: ".buildkite/pipeline.sh | buildkite-agent pipeline upload"
-    label: ":pipeline:"
+  - label: ":pipeline:"
+    command: ".buildkite/pipeline.sh | buildkite-agent pipeline upload"
