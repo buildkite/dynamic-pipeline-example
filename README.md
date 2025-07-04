@@ -1,6 +1,6 @@
 # Buildkite Dynamic Pipeline Steps Example
 
-[![Build status](https://badge.buildkite.com/c2e1cdc85d67dec83d2031e511bc208e911d178e54b59fec8b.svg)](https://buildkite.com/buildkite/dynamic-pipeline-example)
+[![Build status](https://badge.buildkite.com/c2e1cdc85d67dec83d2031e511bc208e911d178e54b59fec8b.svg?branch=main)](https://buildkite.com/buildkite/dynamic-pipeline-example)
 [![Add to Buildkite](https://img.shields.io/badge/Add%20to%20Buildkite-14CC80)](https://buildkite.com/new)
 
 This repository is an example [Buildkite](https://buildkite.com/) pipeline that shows how to programmatically generate dynamic steps using a shell script.
